@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -38,6 +39,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'rest_framework',
     'compressor',
+
+    # USER APPS
+    'authentication',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,6 +58,7 @@ ROOT_URLCONF = 'thinkster_django_angular_boilerplate.urls'
 
 WSGI_APPLICATION = 'thinkster_django_angular_boilerplate.wsgi.application'
 
+AUTH_USER_MODEL = 'authentication.Account'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
